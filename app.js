@@ -1,18 +1,12 @@
-var express = require('express'); //retorna uma funcao
-var app = express(); //executa a funcao dentro do express
+var app = require('./config/server');
 
-app.set('view engine', 'ejs');
+var rotaNoticias = require('./app/routes/noticias')(app); //recupera o módulo e passa como parametro o app.js
 
-app.get('/tecnologia', function(req, res){
-	res.render("secao/tecnologia");
-});
+var rotaFormularioNoticias = require('./app/routes/formulario_inclusao_noticia')(app); //recupera o módulo e passa como parametro o app.js
 
-app.get('/', function(req, res){
-	res.send("<html><body>Portal de Noticias</body></html>")
-});
+var rotaFormularioNoticias = require('./app/routes/home')(app); //recupera o módulo e passa como parametro o app.js
 
 app.listen(3000, function(){
 
 	console.log("Servidor rodando com Express");
-
 });
