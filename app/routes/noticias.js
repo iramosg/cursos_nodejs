@@ -1,16 +1,18 @@
-var dbConnection = require('../../config/dbConnection');
+//var dbConnection = require('../../config/dbConnection');
 
 module.exports = function(app){
 	
-	app.get('/noticias', function(req, res){
+	//var connection = app.dbConnection();
 
-		var connection = dbConnection();
+	app.get('/noticias', function(req, res){		
 
-		connection.query("SELECT * FROM teste_noticias", function(error, result){
-			res.render("noticias/noticias", {dados : result});
-			//res.render(result);
-			//console.log(result);
-		});
+		var connection = app.config.dbConnection;
+
+		console.log(connection);
+
+		// connection.query("SELECT * FROM teste_noticias", function(error, result){
+		// 	res.render("noticias/noticias", {dados : result});
+		// });
 		
 	});
 };
