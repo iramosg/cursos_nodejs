@@ -6,9 +6,10 @@ module.exports = function(app){
 
 		var connection = dbConnection();
 
-		connection.query("SELECT * FROM noticias", function(error, result){
-			res.render("noticias/noticias", {noticias : result});
+		connection.query("SELECT * FROM teste_noticias", function(error, result){
+			res.render("noticias/noticias", {dados : result});
 			//res.render(result);
+			//console.log(result);
 		});
 		
 	});
