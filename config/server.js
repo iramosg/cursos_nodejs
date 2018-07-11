@@ -11,6 +11,7 @@ app.set('views', './app/views');//aponta o caminho das views padrão
 consign()
 	.include('./app/routes')
 	.then('config/dbConnection.js') //possibilidade de inserir mais módulos dentro do consign
+	.then('./app/models') //carrega automaticamente todas as models
 	.into(app); //inclui todos os arquivos de rota  automaticamente
 
 module.exports = app;
