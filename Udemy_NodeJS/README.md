@@ -2,11 +2,14 @@
 
 ### recursos
 > Express
+***
 Framework nodejs para aplicação web.
 
 > EJS
+***
 Linguagem de modelagem HTML
 
 > NodeMon
+***
 Utilitário que reinicia automaticamente o servidor NodeJS
 
