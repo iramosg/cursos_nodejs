@@ -1,4 +1,4 @@
-# Introdução
+# Introdução :rocket:
 
 ## O que é o NODE
 
@@ -88,3 +88,8 @@ Outra maneira de importar o módulo é utilizar um pasta e dentro colocar um arq
 ```
 
 Este arquivo **package.json** deve estar dentro de uma pasta separada com o módulo em questão, o arquivo contendo meu módulo passará a ter o nome de *start.js* para ser inicializado pelo package.json.
+
+O main do package.json é o primeiro arquivo que é chamado pelo node.js
+
+### Node Package Manager NPM
+
